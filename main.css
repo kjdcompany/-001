@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "Cormorant Garamond Light";
+    src: url(fonts/CormorantGaramond-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+/* body {
+    background: url(images/ampoule-papier.jpg);
+    background-size: cover;
+    background-position: center;
+} */
+
+/* La barre en haut avec le logo et le menu de navigation */
+
+header {
+    display: flex;
+    height: 10vh;
+}
+
+header .logo {
+    font-size: 64px;
+    margin-left: 16px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Cormorant Garamond Light"
+}
+
+header ul li a:visited {
+    color: inherit;
+}
+
+header ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    font-size: 22px;
+    margin-right: 32px;
+    margin-left: 48px;
+}
+
+header ul li a:hover {
+    color: #ccc;
+}
+
+/* La presentation du site */
+
+.titre-1 {
+    font-size: 49px;
+    font-family: "Cormorant Garamond Light";
+}
+
+.titre-2 {
+    font-size: 25px;
+    font-family: "Cormorant Garamond Light";
+    text-align: center;
+}
+
+.btns {
+    text-align: center;
+}
+
+
+.main-block {
+    background: url(images/ampoule-papier.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 80vh;
+}
+
+.main-block section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.main-block section h1 span {
+    text-transform: uppercase;
+    color: #e61515;
+}
+
+button {
+    background-color: transparent;
+    text-transform: uppercase;
+    margin-top: 32px;
+    border-radius: 5px;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
+    font-family: "Cormorant Garamond Light";
+    font-size: 22px;
+    ;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+}
+
+.btn-2 {
+    margin-left: 26px;
+    background-color: #e61515;
+}
+
+/* Le bas de l'image */
+footer {
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    font-family: "Cormorant Garamond Light";
+}
+
+footer p {
+    flex-grow: 1;
+    text-align: center;
+}
+
+footer ul {
+    flex-grow: 1;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li a img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+footer ul li a {
+    margin-left: 36px;
+}
+
+footer ul li {
+    display: flex;
+    align-items: center;
+}
+
+.jdk-logo {
+    text-decoration: none;
+    color: white;
+}
+
+.jdk-logo:visited {
+    color: inherit;
+}
