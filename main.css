@@ -238,14 +238,17 @@ form {
   display: flex;
 }
 
-.petite-form #name,
-.petite-form #phone-number {
+#name,
+#family-name,
+#email,
+#phone-number {
   flex-grow: 1;
 }
 
 #name,
+#family-name,
+#email,
 #phone-number,
-#subject,
 #message {
   border: none;
   padding: 10px;
@@ -262,9 +265,9 @@ form {
 #svyaz #submit {
   background-color: transparent;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 0;
   width: fit-content;
-  align-self: center;
+  align-self: flex-end;
   border: none;
   font-size: 22px;
   font-family: "Cormorant Garamond Light";
@@ -274,6 +277,14 @@ form {
 #svyaz #submit:hover {
   color: white;
   background-color: black;
+}
+
+#name:hover,
+#family-name:hover,
+#email:hover,
+#phone-number:hover,
+#message:hover {
+  border-bottom: 1px solid blue;
 }
 
 /*==============================
