@@ -1,33 +1,33 @@
 @font-face {
-    font-family: "Cormorant Garamond Light";
-    src: url(fonts/CormorantGaramond-Light.ttf);
+  font-family: "Cormorant Garamond Light";
+  src: url(fonts/CormorantGaramond-Light.ttf);
 }
 
 /* Reglages en general */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:visited {
-    color: inherit;
+  color: inherit;
 }
 
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline-width: 0;
+  outline-width: 0;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
 /* body {
@@ -39,216 +39,223 @@ textarea {
 /* La barre en haut avec le logo et le menu de navigation */
 
 header {
-    display: flex;
-    height: 10vh;
+  display: flex;
+  height: 10vh;
 }
 
 header .logo {
-    font-size: 64px;
-    margin-left: 16px;
+  font-size: 64px;
+  margin-left: 16px;
 }
 
 header ul {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    font-family: "Cormorant Garamond Light";
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Cormorant Garamond Light";
 }
 
 header ul li a:visited {
-    color: inherit;
+  color: inherit;
 }
 
 header ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    display: block;
-    font-size: 22px;
-    margin-right: 32px;
-    margin-left: 48px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  font-size: 22px;
+  margin-right: 32px;
+  margin-left: 48px;
 }
 
 header ul li a:hover {
-    color: #ccc;
+  color: #ccc;
 }
 
 /* La presentation du site */
 
 .titre-1 {
-    font-size: 49px;
-    font-family: "Cormorant Garamond Light";
+  font-size: 49px;
+  font-family: "Cormorant Garamond Light";
+  text-align: center;
 }
 
 .titre-2 {
-    font-size: 25px;
-    font-family: "Cormorant Garamond Light";
-    text-align: center;
+  font-size: 25px;
+  font-family: "Cormorant Garamond Light";
+  text-align: center;
 }
 
 .btns {
-    text-align: center;
+  text-align: center;
 }
 
 .main-block {
-    background: url(images/ampoule-papier.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    height: 80vh;
+  background: url(images/ampoule-papier.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 80vh;
 }
 
 .main-block section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
 }
 
 .main-block section h1 span {
-    text-transform: uppercase;
-    color: #e61515;
+  text-transform: uppercase;
+  color: #e61515;
 }
 
 .btn-1,
 .btn-2 {
-    background-color: transparent;
-    text-transform: uppercase;
-    margin-top: 32px;
-    border-radius: 5px;
-    padding: 20px 40px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
-    font-family: "Cormorant Garamond Light";
-    font-size: 22px;
+  background-color: transparent;
+  text-transform: uppercase;
+  margin-top: 32px;
+  border-radius: 5px;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75); */
+  font-family: "Cormorant Garamond Light";
+  font-size: 22px;
 }
 
 .btn-1:hover,
 .btn-2:hover {
-    color: white;
-    background-color: black;
+  color: #fffa91;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.btn-1 {
+  border: 1px solid black;
 }
 
 .btn-2 {
-    margin-left: 26px;
-    background-color: #e61515;
+  margin-left: 26px;
+  color: #e61515;
+  border: 1px solid #e61515;
 }
 
 /* Le bas de page */
 footer {
-    background: #ccc;
-    display: flex;
-    align-items: center;
-    height: 10vh;
-    font-family: "Cormorant Garamond Light";
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  font-family: "Cormorant Garamond Light";
 }
 
 footer p {
-    flex-grow: 1;
-    text-align: center;
+  flex-grow: 1;
+  text-align: center;
 }
 
 footer ul {
-    flex-grow: 1;
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
+  flex-grow: 1;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 
 footer ul li a img {
-    display: block;
-    width: 24px;
-    height: 24px;
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
 footer ul li a {
-    margin-left: 36px;
+  margin-left: 36px;
 }
 
 footer ul li {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .jdk-logo {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .jdk-logo:visited {
-    color: inherit;
+  color: inherit;
 }
 
 /*Contact ==Связь== */
 
 #svyaz {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #svyaz p {
-    font-family: "Cormorant Garamond Light";
-    font-size: 22px;
-    margin-top: 10px;
+  font-family: "Cormorant Garamond Light";
+  font-size: 22px;
+  margin-top: 10px;
 }
 
 #svyaz h2 {
-    font-family: "Cormorant Garamond Light";
-    font-size: 52px;
-    margin-top: 50px;
+  font-family: "Cormorant Garamond Light";
+  font-size: 52px;
+  margin-top: 50px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .petite-form {
-    display: flex;
+  display: flex;
 }
 
 .petite-form #name,
 .petite-form #phone-number {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 #name,
 #phone-number,
 #subject,
 #message {
-    border: none;
-    padding: 10px;
-    margin: 10px;
-    border-bottom: 1px solid black;
-    font-family: "Cormorant Garamond Light";
-    font-size: 18px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  border-bottom: 1px solid black;
+  font-family: "Cormorant Garamond Light";
+  font-size: 18px;
 }
 
 #message {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 #svyaz #submit {
-    background-color: transparent;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: fit-content;
-    align-self: center;
-    border: none;
-    font-size: 22px;
-    font-family: "Cormorant Garamond Light";
-    cursor: pointer;
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+  align-self: center;
+  border: none;
+  font-size: 22px;
+  font-family: "Cormorant Garamond Light";
+  cursor: pointer;
 }
 
 #svyaz #submit:hover {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
 
 /*=====
@@ -256,23 +263,23 @@ form {
  ===== */
 
 .isledov-rinka h2 {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 22px;
-    font-family: "Cormorant Garamond Light";
-    position: relative;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 22px;
+  font-family: "Cormorant Garamond Light";
+  position: relative;
 }
 
 .isledov-rinka h2::after {
-    content: "";
-    background: url(icons/estidei/search-icon.png);
-    background-size: 22px 22px;
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    height: 22px;
-    width: 22px;
-    margin-left: 5px;
+  content: "";
+  background: url(icons/estidei/search-icon.png);
+  background-size: 22px 22px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  height: 22px;
+  width: 22px;
+  margin-left: 5px;
 }
 
 /* Les icones dans chaque paragraphe */
@@ -280,141 +287,141 @@ form {
 } */
 
 .isledov-rinka div p::before {
-    content: "";
-    display: block;
-    float: left;
-    height: 60px;
-    width: 60px;
+  content: "";
+  display: block;
+  float: left;
+  height: 60px;
+  width: 60px;
 }
 
 /* ==paragraphe 1== */
 .isledov-rinka div p:nth-child(1)::before {
-    background: url(icons/estidei/1.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/1.png);
+  background-size: 60px 60px;
 }
 
 /* ==paragraphe 2== */
 .isledov-rinka div p:nth-child(2)::before {
-    background: url(icons/estidei/2.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/2.png);
+  background-size: 60px 60px;
 }
 
 /* ==paragraphe 3== */
 .isledov-rinka div p:nth-child(3)::before {
-    background: url(icons/estidei/3.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/3.png);
+  background-size: 60px 60px;
 }
 
 /* ==paragraphe 4== */
 .isledov-rinka div p:nth-child(4)::before {
-    background: url(icons/estidei/4.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/4.png);
+  background-size: 60px 60px;
 }
 
 /* ==paragraphe 5== */
 .isledov-rinka div p:nth-child(5)::before {
-    background: url(icons/estidei/5.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/5.png);
+  background-size: 60px 60px;
 }
 
 /* la grille pour les paragraphes */
 .isledov-rinka div {
-    margin: 40px 10%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-    grid-template-areas:
-        "one one two two three three"
-        ". four four five five .";
+  margin: 40px 10%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  grid-template-areas:
+    "one one two two three three"
+    ". four four five five .";
 }
 
 .isledov-rinka div p:nth-child(1) {
-    grid-area: one;
+  grid-area: one;
 }
 
 .isledov-rinka div p:nth-child(2) {
-    grid-area: two;
+  grid-area: two;
 }
 
 .isledov-rinka div p:nth-child(3) {
-    grid-area: three;
+  grid-area: three;
 }
 
 .isledov-rinka div p:nth-child(4) {
-    grid-area: four;
+  grid-area: four;
 }
 
 .isledov-rinka div p:nth-child(5) {
-    grid-area: five;
+  grid-area: five;
 }
 
 /* le lien Связаться */
 .svyzatsa {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .svyzatsa button {
-    font-family: "Cormorant Garamond Light";
-    font-size: 22px;
-    padding: 10px;
-    border-radius: 18px;
-    border: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
-    background-color: #8ac3f2;
-    cursor: pointer;
-    margin-bottom: 20px;
+  font-family: "Cormorant Garamond Light";
+  font-size: 22px;
+  padding: 10px;
+  border-radius: 18px;
+  border: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+  background-color: #8ac3f2;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 /* la deuxieme parie du block */
 .inv-analysis h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 22px;
-    font-family: "Cormorant Garamond Light";
-    position: relative;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  font-family: "Cormorant Garamond Light";
+  position: relative;
 }
 
 .inv-analysis h2::after {
-    content: "";
-    background: url(icons/estidei/coins.png);
-    background-size: 36px 36px;
-    display: inline-block;
-    height: 36px;
-    width: 36px;
-    position: absolute;
-    bottom: -6px;
-    /* margin-left: 5px; */
+  content: "";
+  background: url(icons/estidei/coins.png);
+  background-size: 36px 36px;
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  bottom: -6px;
+  /* margin-left: 5px; */
 }
 
 /* la grille pour contenir les service */
 
 .inv-analysis div {
-    margin: 40px 10%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-    grid-template-areas:
-        "one two three "
-        ". four .";
+  margin: 40px 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  grid-template-areas:
+    "one two three "
+    ". four .";
 }
 
 .inv-analysis div p:nth-child(1) {
-    grid-area: one;
+  grid-area: one;
 }
 
 .inv-analysis div p:nth-child(2) {
-    grid-area: two;
+  grid-area: two;
 }
 
 .inv-analysis div p:nth-child(3) {
-    grid-area: three;
+  grid-area: three;
 }
 
 .inv-analysis div p:nth-child(4) {
-    grid-area: four;
+  grid-area: four;
 }
 
 /* Les icones dans chaque paragraphe */
@@ -422,29 +429,155 @@ form {
 /* ==paragraphe 1== */
 
 .inv-analysis div p::before {
-    content: "";
-    display: block;
-    float: left;
-    height: 60px;
-    width: 60px;
+  content: "";
+  display: block;
+  float: left;
+  height: 60px;
+  width: 60px;
 }
 
 .inv-analysis div p:nth-child(1)::before {
-    background: url(icons/estidei/01.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/01.png);
+  background-size: 60px 60px;
 }
 
 .inv-analysis div p:nth-child(2)::before {
-    background: url(icons/estidei/02.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/02.png);
+  background-size: 60px 60px;
 }
 
 .inv-analysis div p:nth-child(3)::before {
-    background: url(icons/estidei/03.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/03.png);
+  background-size: 60px 60px;
 }
 
 .inv-analysis div p:nth-child(4)::before {
-    background: url(icons/estidei/04.png);
-    background-size: 60px 60px;
+  background: url(icons/estidei/04.png);
+  background-size: 60px 60px;
+}
+
+/* О нас */
+
+.o-nas {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: darkgrey;
+}
+
+.o-nas div {
+  margin: 0 20%;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.o-nas div h2 {
+  font-family: "Cormorant Garamond Light";
+  font-size: 36px;
+  margin: 0 0 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.o-nas div p {
+  margin: 0 20px;
+  font-family: "Cormorant Garamond Light";
+  font-size: 22px;
+  text-align: justify;
+}
+
+.o-nas div p {
+  margin-bottom: 30px;
+}
+
+/* ========================
+У вас нет идеи
+=========================== */
+
+.titre-estidie {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 22px;
+  font-family: "Cormorant Garamond Light";
+  position: relative;
+}
+
+.titre-estidie::after {
+  content: "";
+  background: url(icons/netidei/buble.png);
+  background-size: 22px 22px;
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+}
+
+.estidie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 50px 10%;
+}
+
+.idey {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.45);
+}
+
+.idey div {
+  position: relative;
+}
+
+.idey div img {
+  width: 100%;
+}
+
+.idey div .sous-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px 0 10px;
+  background-color: white;
+  font-family: "Cormorant Garamond Light";
+  font-size: 22px;
+}
+
+.duration {
+  color: #b0e2eb;
+  padding: 5px 10px 0 10px;
+}
+
+.explication {
+  padding: 5px 10px 0 10px;
+  margin: 10px 0;
+}
+
+.price {
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.price div {
+  flex-grow: 1;
+}
+
+.price a {
+  flex-grow: 1;
+}
+
+.price-number {
+  color: #04ccff;
+}
+
+.price a {
+  display: block;
+  display: flex;
+  justify-content: center;
+}
+
+.price a button {
+  background-color: #fffcc9;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
 }
