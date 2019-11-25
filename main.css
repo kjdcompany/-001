@@ -10,6 +10,17 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -35,6 +46,10 @@ textarea {
     background-size: cover;
     background-position: center;
 } */
+
+/* ===============================
+Главная 
+================================ */
 
 /* La barre en haut avec le logo et le menu de navigation */
 
@@ -93,6 +108,7 @@ header ul li a:hover {
 }
 
 .main-block {
+  flex-grow: 1;
   background: url(images/ampoule-papier.jpg);
   background-size: cover;
   background-position: center;
@@ -148,7 +164,7 @@ footer {
   background: #ccc;
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 65px !important;
   font-family: "Cormorant Garamond Light";
 }
 
@@ -189,10 +205,12 @@ footer ul li {
   color: inherit;
 }
 
-/*Contact ==Связь== */
+/* ===================
+Связь
+======================== */
 
 #svyaz {
-  height: 80vh;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,13 +276,17 @@ form {
   background-color: black;
 }
 
-/*=====
+/*==============================
  Есть идеи
- ===== */
+ ================================== */
+
+/* .wrap-services {
+  flex-grow: 1;
+} */
 
 .isledov-rinka h2 {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 20px;
   font-size: 22px;
   font-family: "Cormorant Garamond Light";
   position: relative;
@@ -375,6 +397,10 @@ form {
 }
 
 /* la deuxieme parie du block */
+.inv-analysis {
+  flex-grow: 1;
+}
+
 .inv-analysis h2 {
   text-align: center;
   margin-top: 20px;
@@ -456,10 +482,12 @@ form {
   background-size: 60px 60px;
 }
 
-/* О нас */
+/* ==============================
+О нас
+================================== */
 
 .o-nas {
-  height: 80vh;
+  flex-grow: 1;
   display: flex;
   align-items: center;
   background-color: darkgrey;
@@ -493,7 +521,11 @@ form {
 У вас нет идеи
 =========================== */
 
-.titre-estidie {
+/* .wrap-idei {
+  flex-grow: 1;
+} */
+
+.titre-netidei {
   text-align: center;
   margin-top: 30px;
   font-size: 22px;
@@ -501,7 +533,7 @@ form {
   position: relative;
 }
 
-.titre-estidie::after {
+.titre-netidei::after {
   content: "";
   background: url(icons/netidei/buble.png);
   background-size: 22px 22px;
@@ -511,9 +543,11 @@ form {
   position: absolute;
 }
 
-.estidie {
+.netidei {
+  flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   gap: 40px;
   margin: 50px 10%;
 }
@@ -528,6 +562,8 @@ form {
 
 .idey div img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .idey div .sous-image {
@@ -543,11 +579,13 @@ form {
 .duration {
   color: #b0e2eb;
   padding: 5px 10px 0 10px;
+  margin: 10px 0 0 0;
 }
 
 .explication {
   padding: 5px 10px 0 10px;
-  margin: 10px 0;
+  font-size: 20px;
+  margin: 0 0 20px 0;
 }
 
 .price {
@@ -564,14 +602,22 @@ form {
   flex-grow: 1;
 }
 
+.ot {
+  font-size: 14px;
+  font-family: "Cormorant Garamond Light";
+}
+
 .price-number {
   color: #04ccff;
+  font-size: 26px;
+  margin-top: 5px;
 }
 
 .price a {
   display: block;
   display: flex;
   justify-content: center;
+  cursor: default;
 }
 
 .price a button {
@@ -580,4 +626,12 @@ form {
   padding: 5px 10px;
   border-radius: 5px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+  font-family: "Cormorant Garamond Light";
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.price a button:hover {
+  color: #fffa91;
+  background-color: #000;
 }
