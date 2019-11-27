@@ -3,6 +3,16 @@
   src: url(fonts/CormorantGaramond-Light.ttf);
 }
 
+@font-face {
+  font-family: "Cinzel";
+  src: url(fonts/Cinzel-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Quintessential";
+  src: url(fonts/Quintessential-Regular.ttf);
+}
+
 /* Reglages en general */
 * {
   margin: 0;
@@ -55,11 +65,12 @@ textarea {
 
 header {
   display: flex;
-  height: 10vh;
+  min-height: 10vh;
 }
 
 header .logo {
-  font-size: 64px;
+  font-family: "Cinzel";
+  font-size: 84px;
   margin-left: 16px;
 }
 
@@ -103,17 +114,17 @@ header ul li a:hover {
   text-align: center;
 }
 
-.btns {
+/* .btns {
   text-align: center;
-}
+} */
 
 .main-block {
   flex-grow: 1;
-  background: url(images/ampoule-papier.jpg);
+  background: url(images/ampoule-papier-2.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   display: flex;
-  height: 80vh;
+  height: 100%;
 }
 
 .main-block section {
@@ -130,6 +141,7 @@ header ul li a:hover {
 
 .btn-1,
 .btn-2 {
+  display: inline-block;
   background-color: transparent;
   text-transform: uppercase;
   margin-top: 32px;
@@ -140,7 +152,16 @@ header ul li a:hover {
   /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75); */
   font-family: "Cormorant Garamond Light";
   font-size: 22px;
+  transition-duration: 0.5s;
 }
+
+/* 
+.btn-1 a,
+.btn-2 a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+} */
 
 .btn-1:hover,
 .btn-2:hover {
@@ -197,6 +218,8 @@ footer ul li {
 }
 
 .jdk-logo {
+  font-family: "Quintessential";
+  text-transform: uppercase;
   text-decoration: none;
   color: white;
 }
@@ -291,14 +314,10 @@ form {
  Есть идеи
  ================================== */
 
-/* .wrap-services {
-  flex-grow: 1;
-} */
-
 .isledov-rinka h2 {
   text-align: center;
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 36px;
   font-family: "Cormorant Garamond Light";
   position: relative;
 }
@@ -306,105 +325,83 @@ form {
 .isledov-rinka h2::after {
   content: "";
   background: url(icons/estidei/search-icon.png);
-  background-size: 22px 22px;
+  background-size: 32px 32px;
   display: inline-block;
   position: absolute;
   bottom: 0;
-  height: 22px;
-  width: 22px;
+  height: 32px;
+  width: 32px;
   margin-left: 5px;
 }
 
 /* Les icones dans chaque paragraphe */
-/* .isledov-rinka div p {
-} */
+.services-icon div {
+  display: flex;
+}
 
-.isledov-rinka div p::before {
-  content: "";
-  display: block;
-  float: left;
-  height: 60px;
+.services-icon img {
   width: 60px;
-}
-
-/* ==paragraphe 1== */
-.isledov-rinka div p:nth-child(1)::before {
-  background: url(icons/estidei/1.png);
-  background-size: 60px 60px;
-}
-
-/* ==paragraphe 2== */
-.isledov-rinka div p:nth-child(2)::before {
-  background: url(icons/estidei/2.png);
-  background-size: 60px 60px;
-}
-
-/* ==paragraphe 3== */
-.isledov-rinka div p:nth-child(3)::before {
-  background: url(icons/estidei/3.png);
-  background-size: 60px 60px;
-}
-
-/* ==paragraphe 4== */
-.isledov-rinka div p:nth-child(4)::before {
-  background: url(icons/estidei/4.png);
-  background-size: 60px 60px;
-}
-
-/* ==paragraphe 5== */
-.isledov-rinka div p:nth-child(5)::before {
-  background: url(icons/estidei/5.png);
-  background-size: 60px 60px;
+  object-fit: contain;
+  margin-right: 10px;
+  align-self: flex-start;
 }
 
 /* la grille pour les paragraphes */
-.isledov-rinka div {
-  margin: 40px 10%;
+.isledov-rinka section {
+  margin: 40px 150px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   gap: 20px;
+  row-gap: 50px;
   grid-template-areas:
     "one one two two three three"
     ". four four five five .";
 }
 
-.isledov-rinka div p:nth-child(1) {
+.isledov-rinka section div:nth-child(1) {
   grid-area: one;
 }
 
-.isledov-rinka div p:nth-child(2) {
+.isledov-rinka section div:nth-child(2) {
   grid-area: two;
 }
 
-.isledov-rinka div p:nth-child(3) {
+.isledov-rinka section div:nth-child(3) {
   grid-area: three;
 }
 
-.isledov-rinka div p:nth-child(4) {
+.isledov-rinka section div:nth-child(4) {
   grid-area: four;
 }
 
-.isledov-rinka div p:nth-child(5) {
+.isledov-rinka section div:nth-child(5) {
   grid-area: five;
 }
 
 /* le lien Связаться */
 .svyzatsa {
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.svyzatsa button {
+.svyzatsa {
   font-family: "Cormorant Garamond Light";
   font-size: 22px;
   padding: 10px;
   border-radius: 18px;
   border: none;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
-  background-color: #8ac3f2;
-  cursor: pointer;
+  background-color: #ef3f3f;
   margin-bottom: 20px;
+}
+
+.svyzatsa:hover {
+  background-color: rgba(239, 63, 63, 0.85);
+  color: white;
 }
 
 /* la deuxieme parie du block */
@@ -415,7 +412,7 @@ form {
 .inv-analysis h2 {
   text-align: center;
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 36px;
   font-family: "Cormorant Garamond Light";
   position: relative;
 }
@@ -423,10 +420,10 @@ form {
 .inv-analysis h2::after {
   content: "";
   background: url(icons/estidei/coins.png);
-  background-size: 36px 36px;
+  background-size: 52px 52px;
   display: inline-block;
-  height: 36px;
-  width: 36px;
+  height: 52px;
+  width: 52px;
   position: absolute;
   bottom: -6px;
   /* margin-left: 5px; */
@@ -434,63 +431,45 @@ form {
 
 /* la grille pour contenir les service */
 
-.inv-analysis div {
-  margin: 40px 10%;
+.services-icon-2 {
+  margin: 40px 150px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 20px;
+  row-gap: 50px;
   grid-template-areas:
     "one two three "
     ". four .";
 }
 
-.inv-analysis div p:nth-child(1) {
+.inv-analysis section div:nth-child(1) {
   grid-area: one;
 }
 
-.inv-analysis div p:nth-child(2) {
+.inv-analysis section div:nth-child(2) {
   grid-area: two;
 }
 
-.inv-analysis div p:nth-child(3) {
+.inv-analysis section div:nth-child(3) {
   grid-area: three;
 }
 
-.inv-analysis div p:nth-child(4) {
+.inv-analysis section div:nth-child(4) {
   grid-area: four;
 }
 
-/* Les icones dans chaque paragraphe */
+/* style des icons */
 
-/* ==paragraphe 1== */
-
-.inv-analysis div p::before {
-  content: "";
-  display: block;
-  float: left;
-  height: 60px;
+.services-icon-2 img {
   width: 60px;
+  object-fit: contain;
+  margin-right: 10px;
+  align-self: flex-start;
 }
 
-.inv-analysis div p:nth-child(1)::before {
-  background: url(icons/estidei/01.png);
-  background-size: 60px 60px;
-}
-
-.inv-analysis div p:nth-child(2)::before {
-  background: url(icons/estidei/02.png);
-  background-size: 60px 60px;
-}
-
-.inv-analysis div p:nth-child(3)::before {
-  background: url(icons/estidei/03.png);
-  background-size: 60px 60px;
-}
-
-.inv-analysis div p:nth-child(4)::before {
-  background: url(icons/estidei/04.png);
-  background-size: 60px 60px;
+.services-icon-2 div {
+  display: flex;
 }
 
 /* ==============================
@@ -532,14 +511,10 @@ form {
 У вас нет идеи
 =========================== */
 
-/* .wrap-idei {
-  flex-grow: 1;
-} */
-
 .titre-netidei {
   text-align: center;
   margin-top: 30px;
-  font-size: 22px;
+  font-size: 36px;
   font-family: "Cormorant Garamond Light";
   position: relative;
 }
@@ -547,15 +522,14 @@ form {
 .titre-netidei::after {
   content: "";
   background: url(icons/netidei/buble.png);
-  background-size: 22px 22px;
+  background-size: 36px 36px;
   display: inline-block;
-  height: 22px;
-  width: 22px;
+  height: 36px;
+  width: 36px;
   position: absolute;
 }
 
 .netidei {
-  flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -581,7 +555,7 @@ form {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 5px 10px 0 10px;
+  padding: 5px 20px 0 20px;
   background-color: white;
   font-family: "Cormorant Garamond Light";
   font-size: 22px;
@@ -589,28 +563,14 @@ form {
 
 .duration {
   color: #b0e2eb;
-  padding: 5px 10px 0 10px;
+  padding: 5px 20px 0 20px;
   margin: 10px 0 0 0;
 }
 
 .explication {
-  padding: 5px 10px 0 10px;
+  padding: 5px 20px 0 20px;
   font-size: 20px;
   margin: 0 0 20px 0;
-}
-
-.price {
-  display: flex;
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
-
-.price div {
-  flex-grow: 1;
-}
-
-.price a {
-  flex-grow: 1;
 }
 
 .ot {
@@ -624,25 +584,25 @@ form {
   margin-top: 5px;
 }
 
-.price a {
-  display: block;
+.price {
   display: flex;
-  justify-content: center;
-  cursor: default;
+  padding: 10px 20px;
+  margin-bottom: 10px;
 }
 
-.price a button {
+.price a {
+  display: inline-block;
+  margin-left: auto;
   background-color: #fffcc9;
   border: none;
-  padding: 5px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
   font-family: "Cormorant Garamond Light";
   font-size: 22px;
-  cursor: pointer;
 }
 
-.price a button:hover {
+.price a:hover {
   color: #fffa91;
   background-color: #000;
 }
