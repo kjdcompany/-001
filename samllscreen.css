@@ -1,0 +1,437 @@
+@font-face {
+    font-family: "Cormorant Garamond Light";
+    src: url(fonts/CormorantGaramond-Light.ttf);
+}
+
+/* Reglages en general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline-width: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* =================   
+Главная
+   ============ */
+
+/* La barre en haut avec le logo et le menu de navigation */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 72px;
+}
+
+.logo {
+    font-size: 64px;
+}
+
+.nav-links-big-screen {
+    display: none;
+}
+
+.burger-menu {
+    display: block;
+}
+
+/* Burger Menu animation */
+
+.burger-menu div {
+    background-color: #ccc;
+    height: 4px;
+    width: 30px;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.rotate .l1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.rotate .l2 {
+    opacity: 0;
+}
+
+.rotate .l3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Menu small screen */
+
+.nodisplay {
+    display: none;
+    transition: all 5s ease-in;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.menu-small-screen {
+    height: 100vh;
+    width: 100vw;
+}
+
+.nav-links-samll-screen {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links-samll-screen li {
+    display: block;
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.5rem;
+    margin: 1.3rem 0;
+    padding: 0 0 0.5rem 0;
+    font-family: "Cormorant Garamond Light";
+    text-transform: uppercase;
+}
+
+/* La presentation du site */
+
+.titre-1 {
+    font-size: 3rem;
+    font-family: "Cormorant Garamond Light";
+    text-align: center;
+}
+
+.titre-2 {
+    font-size: 1.5rem;
+    font-family: "Cormorant Garamond Light";
+    text-align: center;
+}
+
+.btns {
+    text-align: center;
+}
+
+.main-block {
+    flex-grow: 1;
+    background: url(images/ampoule-papier.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 80vh;
+}
+
+.main-block section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.main-block section h1 span {
+    text-transform: uppercase;
+    color: #e61515;
+}
+
+.btn-1,
+.btn-2 {
+    background-color: transparent;
+    text-transform: uppercase;
+    margin-top: 32px;
+    border-radius: 5px;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75); */
+    font-family: "Cormorant Garamond Light";
+    font-size: 22px;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    color: #fffa91;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.btn-1 {
+    border: 1px solid black;
+}
+
+.btn-2 {
+    margin-left: 0;
+    color: #e61515;
+    border: 1px solid #e61515;
+}
+
+/* Le bas de page */
+footer {
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    height: 65px !important;
+    font-family: "Cormorant Garamond Light";
+}
+
+footer p {
+    flex-grow: 1;
+    text-align: center;
+}
+
+footer ul {
+    flex-grow: 1;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li a img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+footer ul li a {
+    margin-left: 36px;
+}
+
+footer ul li {
+    display: flex;
+    align-items: center;
+}
+
+.jdk-logo {
+    text-decoration: none;
+    color: white;
+}
+
+.jdk-logo:visited {
+    color: inherit;
+}
+
+/*==============================
+ Есть идеи
+ ================================== */
+
+.isledov-rinka h2,
+.inv-analysis h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-family: "Cormorant Garamond Light";
+    position: relative;
+}
+
+.isledov-rinka h2::after {
+    content: "";
+    background: url(icons/estidei/search-icon.png);
+    background-size: 1.5rem 1.5rem;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 5px;
+}
+
+/* Les icones dans chaque paragraphe */
+.services-icon div,
+.services-icon-2 div {
+    display: flex;
+    margin: 1rem;
+}
+
+.services-icon img,
+.services-icon-2 img {
+    width: 60px;
+    object-fit: contain;
+    margin-right: 10px;
+    align-self: flex-start;
+}
+
+/* la grille pour les paragraphes */
+.isledov-rinka section,
+.services-icon-2 {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+/* le lien Связаться */
+.svyzatsa {
+    display: inline-block;
+    margin: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.svyzatsa {
+    font-family: "Cormorant Garamond Light";
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+    background-color: #ef3f3f;
+    margin-bottom: 20px;
+}
+
+.svyzatsa:hover {
+    background-color: rgba(239, 63, 63, 0.85);
+    color: white;
+}
+
+/* la deuxieme parie du block */
+
+.inv-analysis h2::after {
+    content: "";
+    background: url(icons/estidei/coins.png);
+    background-size: 2.5rem 2.5rem;
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    bottom: -6px;
+}
+
+
+/* ================
+
+У вас нет идеи
+
+================ */
+
+
+.titre-netidei {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-family: "Cormorant Garamond Light";
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.titre-netidei::after {
+    content: "";
+    background: url(icons/netidei/buble.png);
+    background-size: 2rem 2rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+}
+
+.netidei {
+    display: block;
+    margin: 50px 10%;
+}
+
+.idey {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+}
+
+.idey div {
+    position: relative;
+}
+
+.idey div img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.idey div .sous-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 20px 0 20px;
+    background-color: white;
+    font-family: "Cormorant Garamond Light";
+    font-size: 22px;
+}
+
+.duration {
+    color: #b0e2eb;
+    padding: 5px 20px 0 20px;
+    margin: 10px 0 0 0;
+}
+
+.explication {
+    padding: 5px 20px 0 20px;
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+.ot {
+    font-size: 14px;
+    font-family: "Cormorant Garamond Light";
+}
+
+.price-number {
+    color: #04ccff;
+    font-size: 26px;
+    margin-top: 5px;
+}
+
+.price {
+    display: flex;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.price a {
+    display: inline-block;
+    margin-left: auto;
+    background-color: #fffcc9;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+    font-family: "Cormorant Garamond Light";
+    font-size: 22px;
+}
+
+.price a:hover {
+    color: #fffa91;
+    background-color: #000;
+}
