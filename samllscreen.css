@@ -26,17 +26,6 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-    color: inherit;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline-width: 0;
-}
-
 textarea {
     resize: none;
 }
@@ -45,29 +34,46 @@ li {
     list-style: none;
 }
 
-/* =================   
+
+/* =================
 Главная
    ============ */
 
-/* La barre en haut avec le logo et le menu de navigation */
+/* Orientation du header en flex colonne */
 
 header {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 72px;
+    flex-flow: column;
+    position: relative;
 }
 
+/* !!!!!!pour javascript*/
+.full-screen {
+    height: 100vh;
+}
+
+/* !!!!!!pour javascript*/
+
+/* La barre en haut avec le logo et faire disparaitre le menu de navigation des grands ecrans */
+
 .logo {
-    font-size: 64px;
+    font-size: 3rem;
 }
 
 .nav-links-big-screen {
     display: none;
 }
 
+/* Makes the burger appear */
+
 .burger-menu {
-    display: block;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 10px;
+    z-index: 10;
 }
 
 /* Burger Menu animation */
@@ -75,8 +81,8 @@ header {
 .burger-menu div {
     background-color: #ccc;
     height: 4px;
-    width: 30px;
-    margin: 4px;
+    width: 25px;
+    margin: 2px;
     transition: all 0.3s ease;
 }
 
@@ -94,22 +100,33 @@ header {
 
 /* Menu small screen */
 
+/**!!! Pour javascript*/
+
 .nodisplay {
-    display: none;
-    transition: all 5s ease-in;
+    display: block;
 }
 
-.no-overflow {
-    overflow: hidden;
+.no {
+    display: none;
 }
+
+/**!!! Pour javascript*/
 
 .menu-small-screen {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-350%);
+    transition: all 0.2s ease;
+}
+
+.slide-in {
+    transform: translateY(0);
+    transition: all 0.3s ease;
 }
 
 .nav-links-samll-screen {
-    width: 100%;
+    height: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -117,68 +134,76 @@ header {
 }
 
 .nav-links-samll-screen li {
-    display: block;
-    width: 50%;
+    width: 220px;
     text-align: center;
     border-bottom: 1px solid #ccc;
     font-size: 1.5rem;
-    margin: 1.3rem 0;
+    margin: 1.5rem 0;
     padding: 0 0 0.5rem 0;
     font-family: "Cormorant Garamond Light";
     text-transform: uppercase;
 }
 
-/* La presentation du site */
+/* ==== Block presentation du site ==== */
+
+.main-block {
+    background: url(images/ampoule-papier-2.jpg);
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45); */
+}
+
+.titres-buttons {
+    font-family: "Cormorant Garamond Light";
+    margin: 0 1rem;
+}
+
+.titres-buttons .titre-1 span {
+    text-transform: uppercase;
+    color: #e61515;
+}
 
 .titre-1 {
-    font-size: 3rem;
-    font-family: "Cormorant Garamond Light";
+    font-size: 2.5rem;
     text-align: center;
 }
 
 .titre-2 {
     font-size: 1.5rem;
-    font-family: "Cormorant Garamond Light";
     text-align: center;
 }
 
 .btns {
-    text-align: center;
-}
-
-.main-block {
-    flex-grow: 1;
-    background: url(images/ampoule-papier.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    height: 80vh;
-}
-
-.main-block section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40px;
-}
-
-.main-block section h1 span {
-    text-transform: uppercase;
-    color: #e61515;
+    display: block;
 }
 
 .btn-1,
 .btn-2 {
-    background-color: transparent;
-    text-transform: uppercase;
-    margin-top: 32px;
-    border-radius: 5px;
-    padding: 20px 40px;
+    display: inline-block;
     border: none;
     cursor: pointer;
-    /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75); */
-    font-family: "Cormorant Garamond Light";
-    font-size: 22px;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-1 {
+    border: 1px solid black;
+}
+
+.btn-2 {
+    color: #e61515;
+    border: 1px solid #e61515;
 }
 
 .btn-1:hover,
@@ -188,34 +213,18 @@ header {
     border: 1px solid black;
 }
 
-.btn-1 {
-    border: 1px solid black;
-}
-
-.btn-2 {
-    margin-left: 0;
-    color: #e61515;
-    border: 1px solid #e61515;
-}
-
 /* Le bas de page */
+
 footer {
+    display: block;
     background: #ccc;
-    display: flex;
-    align-items: center;
-    height: 65px !important;
     font-family: "Cormorant Garamond Light";
 }
 
-footer p {
-    flex-grow: 1;
-    text-align: center;
-}
-
 footer ul {
-    flex-grow: 1;
+    width: 100%;
+    height: 3rem;
     display: flex;
-    list-style: none;
     justify-content: center;
     align-items: center;
 }
@@ -235,6 +244,13 @@ footer ul li {
     align-items: center;
 }
 
+footer p {
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+
+}
+
 .jdk-logo {
     text-decoration: none;
     color: white;
@@ -244,17 +260,23 @@ footer ul li {
     color: inherit;
 }
 
+
 /*==============================
  Есть идеи
  ================================== */
+
+.isledov-rinka,
+.inv-analysis {
+    font-family: "Cormorant Garamond Light";
+}
 
 .isledov-rinka h2,
 .inv-analysis h2 {
     text-align: center;
     margin-top: 2rem;
     font-size: 1.5rem;
-    font-family: "Cormorant Garamond Light";
     position: relative;
+    overflow-x: hidden;
 }
 
 .isledov-rinka h2::after {
@@ -262,62 +284,13 @@ footer ul li {
     background: url(icons/estidei/search-icon.png);
     background-size: 1.5rem 1.5rem;
     display: inline-block;
-    position: absolute;
-    bottom: 0;
     height: 1.5rem;
     width: 1.5rem;
+    position: absolute;
+    bottom: 0;
     margin-left: 5px;
 }
 
-/* Les icones dans chaque paragraphe */
-.services-icon div,
-.services-icon-2 div {
-    display: flex;
-    margin: 1rem;
-}
-
-.services-icon img,
-.services-icon-2 img {
-    width: 60px;
-    object-fit: contain;
-    margin-right: 10px;
-    align-self: flex-start;
-}
-
-/* la grille pour les paragraphes */
-.isledov-rinka section,
-.services-icon-2 {
-    margin: 0;
-    display: flex;
-    flex-flow: column;
-}
-
-/* le lien Связаться */
-.svyzatsa {
-    display: inline-block;
-    margin: auto;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.svyzatsa {
-    font-family: "Cormorant Garamond Light";
-    font-size: 22px;
-    padding: 10px;
-    border-radius: 18px;
-    border: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
-    background-color: #ef3f3f;
-    margin-bottom: 20px;
-}
-
-.svyzatsa:hover {
-    background-color: rgba(239, 63, 63, 0.85);
-    color: white;
-}
-
-/* la deuxieme parie du block */
 
 .inv-analysis h2::after {
     content: "";
@@ -330,6 +303,53 @@ footer ul li {
     bottom: -6px;
 }
 
+/* Les images sous forme d'icones dans chaque paragraphe */
+.services-icon div,
+.services-icon-2 div {
+    display: flex;
+    margin: 1rem;
+}
+
+.services-icon img,
+.services-icon-2 img {
+    width: 3.8rem;
+    object-fit: contain;
+    margin-right: 10px;
+    align-self: flex-start;
+}
+
+.services-icon p,
+.services-icon-2 p {
+    font-size: 1.3rem;
+}
+
+/* la grille pour les paragraphes */
+.services-icon,
+.services-icon-2 {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+/* le lien Связаться */
+.svyzatsa {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    padding: 0.9rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
+    background-color: rgba(152, 204, 253);
+    transition-duration: 0.5s;
+}
+
+.svyzatsa:hover {
+    background-color: black;
+    color: rgba(254, 246, 170);
+}
 
 /* ================
 
@@ -337,12 +357,13 @@ footer ul li {
 
 ================ */
 
-
+/* Mise en forme du titre */
 .titre-netidei {
-    text-align: center;
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
     font-family: "Cormorant Garamond Light";
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
     position: relative;
     margin-left: 5%;
     margin-right: 5%;
@@ -358,15 +379,19 @@ footer ul li {
     position: absolute;
 }
 
+/* Pas de grille, un block direct */
 .netidei {
     display: block;
-    margin: 50px 10%;
+    margin: 2rem 10%;
 }
 
+/* L'ombre sur le block de chaque idee */
 .idey {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
     border-radius: 5px;
 }
+
+/* Pour pouvoir mettre le texte en position absolue sur l'image */
 
 .idey div {
     position: relative;
@@ -380,58 +405,165 @@ footer ul li {
     border-top-right-radius: 5px;
 }
 
-.idey div .sous-image {
+/* le texte dans l'angle bas gauche de l'image */
+
+.sous-image {
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 5px 20px 0 20px;
     background-color: white;
     font-family: "Cormorant Garamond Light";
-    font-size: 22px;
+    font-size: 1.5rem;
 }
 
+/* La date juste en bas du projet */
 .duration {
     color: #b0e2eb;
+    font-size: 1rem;
     padding: 5px 20px 0 20px;
     margin: 10px 0 0 0;
 }
 
+/* la mini-explication du projet */
 .explication {
     padding: 5px 20px 0 20px;
-    font-size: 20px;
+    font-size: 1.3rem;
     margin: 0 0 20px 0;
 }
 
-.ot {
-    font-size: 14px;
-    font-family: "Cormorant Garamond Light";
-}
-
-.price-number {
-    color: #04ccff;
-    font-size: 26px;
-    margin-top: 5px;
-}
-
+/* le block contenant le prix et le boutton*/
 .price {
     display: flex;
     padding: 10px 20px;
     margin-bottom: 10px;
 }
 
+.ot {
+    font-size: 1.2rem;
+    font-family: "Cormorant Garamond Light";
+}
+
+/* le prix */
+.price-number {
+    color: #04ccff;
+    font-size: 1.8rem;
+    margin-top: 5px;
+}
+
+/* Le boutton clickable a droite du prix */
 .price a {
     display: inline-block;
     margin-left: auto;
     background-color: #fffcc9;
     border: none;
-    padding: 10px 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
     font-family: "Cormorant Garamond Light";
-    font-size: 22px;
+    font-size: 1.5rem;
+    padding: 0.9rem;
+    border-radius: 0.7rem;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.75);
+    transition-duration: 0.5s;
 }
 
 .price a:hover {
-    color: #fffa91;
-    background-color: #000;
+    background-color: black;
+    color: rgba(254, 246, 170);
+}
+
+/* ==============================
+О нас
+================================== */
+
+.image-deco {
+    display: none;
+}
+
+.texte-o-nas {
+    grid-area: 1 / 1 / 2 / span 2;
+    margin: 0;
+}
+
+.texte-o-nas h2 {
+    font-size: 2rem;
+}
+
+.texte-o-nas p {
+    font-size: 1.5rem;
+}
+
+/* ===================
+Связь
+======================== */
+
+.svyaz {
+    font-family: "Cormorant Garamond Light";
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.svyaz h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.svyaz p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.petite-form {
+    display: block;
+}
+
+.petite-form-input {
+    display: block;
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+textarea {
+    width: 70%;
+}
+
+.tout-texte {
+    border: none;
+    padding: 10px;
+    border-bottom: 0.05rem solid black;
+    font-family: "Cormorant Garamond Light";
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+
+.envoyer {
+    display: block;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    font-size: 1.4rem;
+    font-family: "Cormorant Garamond Light";
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.envoyer:hover {
+    color: white;
+    background-color: black;
+    border-radius: 0.2rem;
+}
+
+.tout-texte:hover {
+    border-bottom: 0.05rem solid blue;
+}
+
+.tout-texte:focus {
+    border-bottom: 0.05rem solid blue;
+    outline-width: 0;
 }
