@@ -33,14 +33,6 @@ button:focus {
     outline-width: 0;
 }
 
-input,
-select,
-textarea,
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
-
 textarea {
     resize: none;
 }
