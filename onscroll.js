@@ -1,2 +1,1 @@
 const headerH=document.getElementById("headerH"),titre=document.getElementById("titre-for-scroll");let lastScrollTop=0;window.addEventListener("scroll",()=>{let e=pageYOffset;e>lastScrollTop?(headerH.classList="",titre.style.marginTop="2rem"):(headerH.classList="header-scroll-up",titre.style.marginTop="97px"),lastScrollTop=e,pageYOffset<=0&&(headerH.classList="",titre.style.marginTop="2rem")});
-//# sourceMappingURL=onscroll.js.map
